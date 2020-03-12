@@ -6,6 +6,7 @@ DROP TABLE IF EXISTS article;
 DROP TABLE IF EXISTS tag;
 DROP TABLE IF EXISTS author;
 
+/* author, article,tag: Strong Entity */
 CREATE TABLE author(
 	authorId BINARY(16) NOT NULL,
 	authorActivationToken CHAR(32),
@@ -36,7 +37,7 @@ CREATE TABLE article(
 	PRIMARY KEY(articleId)
 );
 
-/* weak entity */
+/* articleTag:weak entity */
 CREATE TABLE articleTag(
 	articleTagArticleId Binary(16) Not Null,
 	articleTagTagId BINARY(16) NOT NULL,
